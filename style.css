@@ -1,0 +1,189 @@
+:root {
+  --glass-bg: rgba(255, 255, 255, 0.25);
+  --glass-border: rgba(255, 255, 255, 0.18);
+  --glass-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  --link-color: #222;
+  --link-hover-bg: rgba(255, 255, 255, 0.35);
+  --link-bg: rgba(255, 255, 255, 0.15);
+  --link-hover-color: #ffffff;
+  --link-shadow-hover: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", "Arial", sans-serif;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+@media (min-width: 901px) {
+  #cabecario {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px) saturate(180%);
+    -webkit-backdrop-filter: blur(10px) saturate(180%);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+  }
+
+  #cabecario nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 20px;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+  }
+
+  #cabecario a {
+    text-decoration: none;
+    color: var(--link-color);
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 5px 15px;
+    border-radius: 8px;
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+    background: var(--link-bg);
+
+    a:hover,
+    a:focus {
+      background: var(--link-hover-bg);
+      color: var(--link-hover-color);
+      box-shadow: var(--link-shadow-hover);
+      outline: none;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  #cabecario {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .hamburger-menu {
+    display: block;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px;
+    z-index: 1000;
+    border-radius: 5px;
+  }
+
+  .bar1,
+  .bar2,
+  .bar3 {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+    border-radius: 2px;
+  }
+
+  .change .bar1 {
+    transform: translate(0, 9px) rotate(-45deg);
+  }
+
+  .change .bar2 {
+    opacity: 0;
+  }
+
+  .change .bar3 {
+    transform: translate(0, -9px) rotate(45deg);
+  }
+
+  #cabecario nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px) saturate(180%);
+    -webkit-backdrop-filter: blur(10px) saturate(180%);
+    border-bottom: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    flex-direction: column;
+    align-items: center;
+    padding-top: 80px;
+    padding-bottom: 20px;
+    z-index: 100;
+
+    transform: translateY(-100%);
+    transition: transform 0.4s ease;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  #cabecario nav.active {
+    transform: translateY(0);
+    gap: 20px;
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  #cabecario nav a {
+    background: #1c1c1c;
+    backdrop-filter: blur(10px) saturate(180%);
+    -webkit-backdrop-filter: blur(10px) saturate(180%);
+    border-bottom: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    border-radius: 15px;
+    width: 60%;
+    height: auto;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+    text-decoration: none;
+    text-align: center;
+  }
+}

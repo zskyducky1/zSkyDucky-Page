@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="css/page1.css" />
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+  <title>zSkyDucky</title>
+</head>
+
+<body id="page1">
+  <header id="cabecario">
+    <div class="hamburger-menu">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </div>
+
+      <nav class="nav_links">
+        <a href="page1.html">Home</a>
+        <a href="page2.html">Canais Parceiros </a>
+        <a href="page3.html">Redes Sociais </a>
+        <a href="page4.html">Canal</a>
+      </nav>
+    </header> 
+
+  <section id="home">
+    <div class="box_text">
+      <h3>2011</h3>
+      <h1>zSkyDucky</h1>
+    </div>
+
+    <div class="box_container">
+      <img src="assets/page1/skyofc.png" alt="cartaz" width="300" />
+      <div class="box-desc">
+        <p>
+            zSkyDucky (nickname) criado em 2011.
+            <br>
+            Clã: CLT – CELESTES
+            <br>
+            Formado: pelos membros zSkyDucky, DoceAnjo00, SmokeDeath
+            <br>
+            Dias de lives: segunda, quarta e sexta
+            <br>
+            Horário: 19:00 (pode atrasar um pouco, chegando no máximo a 19:30)
+            <br>
+            Sábado: normalmente várias lives, começando a partir das 15:00, 16:00 ou 17:00.
+
+        </p>
+
+        <h2>Todos os direitos e reservados a Renato Kenedi</h2>
+      </div>
+    </div>
+
+    <div class="contact">
+      <h2>Entre em Contato</h2>
+      <form id="contact-form" class="contact-form" novalidate>
+        <div class="form-group">
+          <label for="name">Nome</label>
+          <input type="text" id="name" placeholder="Seu nome" />
+          <div id="name-error" class="error-message">
+            Por favor, insira seu nome.
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" placeholder="seu@email.com" />
+          <div id="email-error" class="error-message">
+            Por favor, insira um e-mail válido.
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="phone">Telefone / Whatsapp</label>
+          <input type="tel" id="phone" placeholder="(11) 91234-5678" maxlength="15">
+          <div id="phone-error" class="error-message">
+            Por favor, informe um telefone válido.
+          </div>
+          <button type="submit">Enviar</button>
+        </div>
+    </div>
+    </form>
+    </div>
+
+  </section>
+
+  <script src="/js/hamburger.js"></script>
+  <script src="/js/telefonemask.js"></script>
+</body>
+
+</html>
