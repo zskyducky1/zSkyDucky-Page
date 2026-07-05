@@ -17,4 +17,3 @@ telefoneInput.addEventListener('input', (e) => {
 
   e.target.value = valor;
 });
-
