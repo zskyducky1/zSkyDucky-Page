@@ -100,6 +100,5 @@ zSkyDucky-Page/
 ## 👥 Créditos
 
 - **Produção:** Renato Kenedi
-- **Administradores:** XStormZero, DoceAnjo00, SmokeDeath
-
+  
 Todos os direitos reservados a **Renato Kenedi**.
